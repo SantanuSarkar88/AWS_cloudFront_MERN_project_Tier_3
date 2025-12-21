@@ -12,8 +12,7 @@ const app = express();
 const port = process.env.PORT || 8080;
 
 const corsPolicy = {
-  // origin: "*",
-  origin: ["https://d72ctvm7pwwhz.cloudfront.net"],
+  origin: "*",
   credentials: true,
 };
 
@@ -38,3 +37,4 @@ connectDB().then(() => {
   app.listen(port,'0.0.0.0', () => console.log(`Server running in ${port}`));
 
 });
+
