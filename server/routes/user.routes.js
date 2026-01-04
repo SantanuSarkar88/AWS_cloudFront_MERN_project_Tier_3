@@ -8,11 +8,12 @@ import { authorize, restrict } from "../auth/verification.js";
 const router = express.Router();
 
 // http://localhost:3000/api/v1/user/edituser/12345
-router.put("/edituser/:id", authorize, restrict(["admin"]), editUser);
+router.put("/edituser/:id",  restrict(["admin"]), editUser);
 // deleteuser
-router.put("/deleteuser/:id", authorize, restrict(["admin"]), deleteUser);
+router.put("/deleteuser/:id",  restrict(["admin"]), deleteUser);
 // getsingleuserinfo
-router.put("/getsingleuser/:id", authorize, restrict(["admin"]), getSingleuserById);
+router.put("/getsingleuser/:id",  restrict(["admin"]), getSingleuserById);
 // getalluser
-router.get("/getallusers", authorize, restrict(["admin"]), getAllusers);
+router.get("/getallusers",  restrict(["admin"]), getAllusers);
 export default router;
+
